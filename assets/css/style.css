@@ -18,8 +18,10 @@
 body {
   box-sizing: border-box;
   background-color: var(--color-primaria);
-  padding: 0 16px;
+  padding: 4%;
   width: 100%;
+  display: flex;
+  flex-direction: column;  
 }
 
 header {
@@ -33,10 +35,14 @@ header {
   width: 100%;
   flex-wrap: wrap;
   margin-bottom: 24px;
+  height: 80vh;
 }
 
 .main {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 #text_area,
@@ -47,7 +53,7 @@ header {
   background: none;
   border: none;
   width: 100%;
-  min-height: 287px;
+  height: 27vh;
 }
 
 #text_area::placeholder,
@@ -83,11 +89,6 @@ header {
 
 .buttons_container {
   display: flex;
-
-}
-
-.buttons {
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -114,12 +115,15 @@ header {
 }
 
 .result {
+  display: flex;
+  align-items:center ;
   width: 100%;
   margin-top: 64px;
   border-radius: 32px;
   background-color: white;
   padding: 32px;
   box-shadow: -1px 19px 30px 1px rgb(20 19 19 / 21%);
+  flex-wrap: wrap;
 }
 
 .default_container {
@@ -136,8 +140,18 @@ header {
   text-align: center;
 }
 
+.img_find{
+  display: none;
+}
 
-.default_container #result_text_area {}
+.result_container{
+  width: 100%;
+}
+
+.result_container #result_text_area {
+  color: #495057;
+  font-size: 24px;
+}
 
 .result_container button#btn_copy {
   width: 100%;
@@ -161,4 +175,68 @@ footer p {
 
 .hidden {
   display: none;
+}
+
+
+@media (min-width: 426px){
+  .buttons_container{
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  
+  .btn{
+    width: 46%;
+  }
+}
+
+/* Tablets */
+@media (min-width: 679px)  { 
+
+  #text_area{
+    height: 50vh;
+    max-height: 50vh;
+    max-width: 100%;
+  }
+
+  #result_text_area {
+    height: 30vh;
+    max-height: 30vh;
+    max-width: 100%;
+  }
+}
+
+
+@media (min-width: 1024px)  {
+
+  .container {
+    justify-content: space-between;
+  }
+
+  .main{
+    width: 60%;
+  }
+
+  .result{
+    width: 30%;
+    margin-top: 0;
+  height: 89%;
+  }
+
+  .img_find{
+    display: block;
+    width: 100%;
+    margin-bottom: 32px;
+  }
+
+  #text_area{
+    height: 73vh;
+    max-height: 73vh;
+    max-width: 100%;
+  }
+
+  #result_text_area {
+    height: 61vh;
+    max-height: 61vh;
+    max-width: 100%;
+  }
 }
