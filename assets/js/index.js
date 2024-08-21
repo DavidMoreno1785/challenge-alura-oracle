@@ -11,6 +11,8 @@ const result_text_area = document.getElementById("result_text_area");
 const btn_cifrar = document.getElementById("btn_cifrar");
 const btn_descifrar = document.getElementById("btn_descifrar");
 const btn_copy = document.getElementById("btn_copy");
+const result_container = document.getElementById("result_container");
+const default_container = document.getElementById("default_container");
 
 const encrypt = () =>{
   let data = text_area.value;
@@ -23,6 +25,8 @@ const encrypt = () =>{
   result_text_area.value = textEncrypted;
 
   text_area.value = "";
+  result_container.classList.remove("hidden");
+  default_container.classList.add("hidden")
 }
 
 const decrypt = () =>{
