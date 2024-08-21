@@ -21,6 +21,8 @@ const encrypt = () =>{
   const textEncrypted = lettersArray.map((letter) => keys[letter] || letter).toString().replaceAll(",", "");
 
   result_text_area.value = textEncrypted;
+
+  text_area.value = "";
 }
 
 const decrypt = () =>{
@@ -34,6 +36,7 @@ const decrypt = () =>{
   }
 
   result_text_area.value = textDecrypted;
+  text_area.value = "";
 }
 
 const copy = () => {

@@ -1,44 +1,49 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Challenge</title>
-  <link rel="stylesheet" href="assets/css/style.css/">
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
+
 <body>
   <header>
-    <nav>
-      <figure>
-        <img src="./assets/img/logo.png" alt="Logo">
-      </figure>
-    </nav>
+    <figure>
+      <img src="./assets/img/logo.png" alt="Logo">
+    </figure>
   </header>
   <div class="container">
     <section class="main">
-      <textarea name="text_area" id="text_area"></textarea>
+      <textarea name="text_area" id="text_area" placeholder="Ingrese el texto aqui"></textarea>
+      <div class="info">
+        <img src="assets/img/Group.png" id="icon">
+        <span class="span-info">Solo letras minúsculas y sin acentos</span>
+      </div>
       <div class="buttons_container">
-        <span>Solo letras minúsculas y sin acentos</span>
         <div class="buttons">
-          <button id="btn_cifrar">Encriptar</button>
-          <button id="btn_descifrar">Desencriptar</button>
+          <button id="btn_cifrar" class="btn">Encriptar</button>
+          <button id="btn_descifrar" class="btn">Desencriptar</button>
         </div>
       </div>
-      <section class="result">
-        <div class="default_container">
-          <h2>Ningún mensaje fue encontrado</h2>
-          <p>Ingresa el texto que desees encriptar o desencriptar.</p>
-        </div>
-        <div class="result_container">
-          <textarea name="result_text_area" id="result_text_area"></textarea>
-          <button id="btn_copy">Copiar</button>
-        </div>
-      </section>
     </section>
+    <section class="result">
+      <div class="default_container">
+        <h2>Ningún mensaje fue encontrado</h2>
+        <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+      </div>
+      <div class="result_container">
+        <textarea name="result_text_area" id="result_text_area"></textarea>
+        <button id="btn_copy" class="btn">Copiar</button>
+      </div>
+    </section>
+
   </div>
   <footer>
     <p> David Moreno. 2024</p>
   </footer>
   <script src="assets/js/index.js"></script>
 </body>
+
 </html>
